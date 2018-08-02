@@ -20,6 +20,7 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+<<<<<<< HEAD
     aaptOptions {
         noCompress "tflite"
     }
@@ -27,10 +28,17 @@ android {
 repositories {
     maven {
         url 'https://google.bintray.com/tensorflow'
+=======
+    productFlavors {
+>>>>>>> 39d73d59fbc45dc33fcd96daf4ffe4d4a8f7d818
     }
 }
 dependencies {
+<<<<<<< HEAD
     implementation fileTree(dir: 'libs', include: ['*.jar'])
+=======
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+>>>>>>> 39d73d59fbc45dc33fcd96daf4ffe4d4a8f7d818
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
     //noinspection GradleCompatible
     implementation 'com.android.support:appcompat-v7:27.1.1'
@@ -43,6 +51,7 @@ dependencies {
     implementation 'com.squareup.retrofit2:converter-gson:2.4.0'
     implementation 'io.reactivex.rxjava2:rxandroid:2.0.2'
     implementation 'io.reactivex.rxjava2:rxjava:2.1.9'
+<<<<<<< HEAD
     //noinspection GradleCompatible
     implementation 'com.android.support:support-v13:27.1.1'
     implementation 'com.android.support:support-annotations:27.1.1'
@@ -55,4 +64,6 @@ dependencies {
     annotationProcessor 'android.arch.persistence.room:compiler:1.1.1'
 
     implementation ('com.amazonaws:aws-android-sdk-mobile-client:2.6.+@aar') { transitive = true }
+=======
+>>>>>>> 39d73d59fbc45dc33fcd96daf4ffe4d4a8f7d818
 }

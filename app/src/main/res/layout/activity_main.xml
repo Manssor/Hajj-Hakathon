@@ -7,6 +7,7 @@
     tools:context=".MainActivity">
 
     <Button
+<<<<<<< HEAD
         android:id="@+id/moveToCamera"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -32,4 +33,36 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
+=======
+        android:id="@+id/speak"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="148dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="148dp"
+        android:layout_marginTop="184dp"
+        android:text="Button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/speakTxt"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/speakTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:text="TextView"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.548"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="141dp" />
+>>>>>>> 39d73d59fbc45dc33fcd96daf4ffe4d4a8f7d818
 </android.support.constraint.ConstraintLayout>
