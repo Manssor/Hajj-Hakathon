@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Gradle: __local_aars__:/Users/abdullah/Desktop/Hajj-Hakathon/app/libs/aws-android-sdk-apigateway-core-2.6.26.jar:unspecified@jar">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/app/libs/aws-android-sdk-apigateway-core-2.6.26.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

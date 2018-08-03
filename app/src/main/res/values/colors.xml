@@ -1,16 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!--Theme colors-->
-    <color name="colorPrimary">#FFCB141E</color>
-    <color name="colorPrimaryDark">#FFBF1019</color>
+    <color name="colorPrimary">#FF5774</color>
+    <color name="colorPrimaryDark">#FF184C</color>
     <color name="colorAccent">#FF076DB5</color>
     <color name="colorDivider">#1FFFFFFF</color>
     <color name="colorError">#ffff4444</color>
     <color name="textColorPrimary">#FF444444</color>
     <color name="textColorSecondary">#FF8D8D8D</color>
     <color name="colorTransparent">#00FFFFFF</color>
-    <color name="BackgroundColorTransparent">#40000000</color>
-    <color name="MainBackground">#FFF7F7F7</color>
+    <color name="whiteColor">#FFFFFFFF</color>
 
 
     <!--App colors-->
@@ -28,16 +27,12 @@
     <color name="profileBackgroundViewColor">#FFEFEFEF</color>
     <color name="profileBackgroundTextViewColor">#FF076DB5</color>
     <color name="packageBackgroundTextViewColor">#FF424242</color>
-    <color name="whiteColor">#FFFFFFFF</color>
     <color name="grayBackgroundColor">#FFF5F5F5</color>
     <color name="backgroundDisableButton">#1F000000</color>
     <color name="backgroundUserStatistics">#FFECECEC</color>
     <color name="textColorDisable">#42000000</color>
     <color name="TermsAndConditionsBackground">#0CCB141E</color>
 
-    <color name="unpaid_color">#FFA5B0B8</color>
-    <color name="paid_color">#FF57B872</color>
-    <color name="free_color">#FF57B872</color>
-    <color name="expired_color">#FFCB141E</color>
+    <color name="free_color">#25C738</color>
 
 </resources>

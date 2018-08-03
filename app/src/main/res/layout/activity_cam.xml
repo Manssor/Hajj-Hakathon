@@ -5,22 +5,243 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".CamActivity">
-<Button
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:id="@+id/takePhoto"
-    android:text="TakePhoto"
-    app:layout_constraintTop_toTopOf="parent"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintEnd_toEndOf="parent"/>
 
     <ImageView
+        android:id="@+id/imageView"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:id="@+id/imageView"
-        app:layout_constraintTop_toBottomOf="@id/takePhoto"
-        app:layout_constraintStart_toStartOf="parent"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toTopOf="@id/informationView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
+    <ScrollView
+        android:id="@+id/informationView"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/firstNameLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/first_name"
+                android:textColor="@color/colorError"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="DuplicateIds,RtlCompat" />
+
+            <TextView
+                android:id="@+id/firstNameTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@id/firstNameLabel"
+                app:layout_constraintStart_toEndOf="@+id/firstNameLabel"
+                app:layout_constraintTop_toTopOf="@id/firstNameLabel"
+                tools:ignore="DuplicateIds,RtlCompat"
+                tools:text="Abdullah" />
+
+            <TextView
+                android:id="@+id/lastNameLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="4dp"
+                android:text="@string/last_name"
+                android:textColor="@color/colorError"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/firstNameLabel"
+                tools:ignore="RtlCompat" />
+
+            <TextView
+                android:id="@+id/lastNameTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@id/lastNameLabel"
+                app:layout_constraintStart_toEndOf="@+id/lastNameLabel"
+                app:layout_constraintTop_toTopOf="@id/lastNameLabel"
+                tools:ignore="RtlCompat"
+                tools:text="Saleh" />
+
+            <TextView
+                android:id="@+id/genderLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/gender"
+                android:textColor="@color/colorError"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/lastNameLabel"
+                tools:ignore="RtlCompat" />
+
+            <TextView
+                android:id="@+id/genderTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@id/genderLabel"
+                app:layout_constraintStart_toEndOf="@id/genderLabel"
+                app:layout_constraintTop_toTopOf="@id/genderLabel"
+                tools:ignore="RtlCompat"
+                tools:text="Male" />
+
+
+            <TextView
+                android:id="@+id/ageLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="4dp"
+                android:text="@string/age"
+                android:textColor="@color/colorError"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@id/genderTextView"
+                app:layout_constraintStart_toEndOf="@id/genderTextView"
+                app:layout_constraintTop_toTopOf="@id/genderTextView"
+                tools:ignore="RtlCompat" />
+
+            <TextView
+                android:id="@+id/ageTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@id/ageLabel"
+                app:layout_constraintStart_toEndOf="@+id/ageLabel"
+                app:layout_constraintTop_toTopOf="@id/ageLabel"
+                tools:ignore="RtlCompat"
+                tools:text="31" />
+
+
+            <TextView
+                android:id="@+id/diabetesLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="4dp"
+                android:text="@string/diabetes"
+                android:textColor="@color/colorError"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/genderLabel"
+                tools:ignore="RtlCompat" />
+
+            <TextView
+                android:id="@+id/diabetesTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@id/diabetesLabel"
+                app:layout_constraintStart_toEndOf="@+id/diabetesLabel"
+                app:layout_constraintTop_toTopOf="@id/diabetesLabel"
+                tools:ignore="RtlCompat"
+                tools:text="Yes" />
+
+            <TextView
+                android:id="@+id/bloodLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="4dp"
+                android:text="@string/blood_pressure"
+                android:textColor="@color/colorError"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@id/diabetesTextView"
+                app:layout_constraintStart_toEndOf="@id/diabetesTextView"
+                app:layout_constraintTop_toTopOf="@id/diabetesTextView"
+                tools:ignore="RtlCompat" />
+
+            <TextView
+                android:id="@+id/bloodTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@id/bloodLabel"
+                app:layout_constraintStart_toEndOf="@+id/bloodLabel"
+                app:layout_constraintTop_toTopOf="@id/bloodLabel"
+                tools:ignore="RtlCompat"
+                tools:text="Yes" />
+
+            <TextView
+                android:id="@+id/medicationLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="4dp"
+                android:text="@string/medications"
+                android:textColor="@color/colorError"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/diabetesLabel"
+                tools:ignore="RtlCompat" />
+
+            <TextView
+                android:id="@+id/medicationTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@id/medicationLabel"
+                app:layout_constraintStart_toEndOf="@id/medicationLabel"
+                app:layout_constraintTop_toTopOf="@id/medicationLabel"
+                tools:ignore="RtlCompat"
+                tools:text="Panadol, Amlor, Concor (5ml), Liptor" />
+
+
+            <Button
+                android:id="@+id/confirmButton"
+                style="@style/ActionButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_margin="16dp"
+                android:background="@color/free_color"
+                android:text="@string/confirm"
+                android:textAllCaps="false"
+
+                android:textColor="@color/whiteColor"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/toVideoCallButton"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/medicationTextView"
+                tools:ignore="RtlCompat" />
+
+            <Button
+                android:id="@+id/toVideoCallButton"
+                style="@style/ActionButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_margin="16dp"
+                android:layout_marginTop="8dp"
+                android:background="@color/free_color"
+                android:text="@string/to_video_call"
+                android:textAllCaps="false"
+                android:textColor="@color/whiteColor"
+                app:layout_constraintBottom_toBottomOf="@+id/confirmButton"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/confirmButton"
+                app:layout_constraintTop_toTopOf="@+id/confirmButton"
+                tools:ignore="RtlCompat" />
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
 </android.support.constraint.ConstraintLayout>
