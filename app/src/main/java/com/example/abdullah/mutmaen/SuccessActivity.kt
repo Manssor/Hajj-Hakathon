@@ -1,9 +1,11 @@
 package com.example.abdullah.mutmaen
 
+import android.content.Context
 import android.content.Intent
 import android.content.pm.ActivityInfo
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.preference.PreferenceManager
 
 class SuccessActivity : AppCompatActivity() {
 
@@ -28,6 +30,13 @@ class SuccessActivity : AppCompatActivity() {
             }
         }
         myThread.start()
+    }
+
+    override fun attachBaseContext(newBase: Context) {
+        val preferences = PreferenceManager.getDefaultSharedPreferences(newBase)
+        MainActivity.LANG_CURRENT = preferences.getString("Language", "en")
+
+        super.attachBaseContext(MyContextWrapper.Companion.wrap(newBase, MainActivity.LANG_CURRENT!!))
     }
 
     override fun onBackPressed() {}
