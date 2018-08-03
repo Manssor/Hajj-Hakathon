@@ -58,11 +58,16 @@ public class FireVideoActivity extends AppCompatActivity {
     }
 
     private void setupLocalVideo() {
-        FrameLayout container = (FrameLayout) findViewById(R.id.local_video_view_container);
+        FrameLayout container = (FrameLayout) findViewById(R.id.online_video_view_container);
         SurfaceView surfaceView = RtcEngine.CreateRendererView(getBaseContext());
         surfaceView.setZOrderMediaOverlay(true);
         container.addView(surfaceView);
         mRtcEngine.setupLocalVideo(new VideoCanvas(surfaceView, VideoCanvas.RENDER_MODE_ADAPTIVE, 0));
+        FrameLayout container2 = (FrameLayout) findViewById(R.id.local_video_view_container);
+        SurfaceView surfaceView2 = RtcEngine.CreateRendererView(getBaseContext());
+        surfaceView2.setZOrderMediaOverlay(true);
+        container2.addView(surfaceView2);
+        mRtcEngine.setupLocalVideo(new VideoCanvas(surfaceView2, VideoCanvas.RENDER_MODE_FIT, 0));
     }
 
     private void joinChannel() {
